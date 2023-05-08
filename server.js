@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 const mongoDB = require("./db")
 mongoDB();
+const PORT = process.env.PORT || 8000
 
 
 app.use((req, res,  next)=>{
@@ -23,6 +24,6 @@ app.use(express.json());
 app.use('/api', require('./Router/Auth'))
 
 
-app.listen(8000, function(req, res) {
-    console.log("Server in Port 8000");
+app.listen(PORT, function(req, res) {
+    console.log(`Server start at port no ${PORT}`);
 });
