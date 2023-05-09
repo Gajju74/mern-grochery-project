@@ -5,7 +5,7 @@ const { body, validationResult } = require('express-validator');
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const Order = require("../models/Order");
-const { json } = require("react-router-dom");
+// const { json } = require("react-router-dom");
 require("dotenv").config();
 const jwtScrete = process.env.SECRET_KEY;
 
